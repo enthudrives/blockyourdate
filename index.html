@@ -17,7 +17,7 @@
   width: 300px;
   height: 400px;
   float: left;
-  padding-right: 10px;
+  padding-right: 8px;
   padding-left: 10px;
    border-radius: 25px;
 }
@@ -29,11 +29,21 @@
   width: 250px;
   height: 200px;
   margin-right: 10px;
+  padding-left: 10px;
   padding-right: 10px;
   position: relative;
    border-radius: 25px;
 
 } 
+.calendar {
+   position: absolute;
+    top: 40%;
+    left: 50%;
+    margin-top: -50px;
+    margin-left: -50px;
+    width: 100px;
+    height: 100px;
+}
 </style>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 <script>
@@ -50,19 +60,21 @@ $(document).ready(function(){
 <link rel="stylesheet" type="text/css" href="css/date.css">
 </head>
 <body>
+  <div class="calendar">
 <time datetime="2014-09-12" class="icon">
   <em>Friday</em>
   <strong>September</strong>
   <span>12</span>
 </time>
+</div>
 <div id="footer" align="center"> 
 <i class="time fa fa-clock-o fa-3x"></i> 
  <i class="contact fa fa-mobile fa-3x"></i> 
 </div>
 <div id="schedule" hidden>
   <div class="wedding"> 
-    <h4><center>The Wedding</center></h4>
     <img src="img/wedding.png" style="float:left;"/>
+    <h3>The Wedding</h3>
     <div class="venue-content">
     9:00 am - 10:15 am<br>
     Annai Wedding hall,
@@ -72,8 +84,11 @@ $(document).ready(function(){
   </div>
   <br><br><br>
   <div class="reception">
-    <h4><center>The Reception</center></h4>
+    <img src="img/dance.png" style="float:right;"/>
+    <h3>The Reception</h3>
     6:00 pm - 9:00 pm <br>
+    Chellammak Thirumana Mandapam,
+    Mangalakuntu,
     Karungal,
     Kanyakumari
   </div>
