@@ -11,29 +11,38 @@
 .fa {
    margin-right: 15px;
 }
-.triangle-right {
-  position:relative;
-  padding:15px;
-  margin:1em 0 3em;
-  color:#fff;
-  width: 100px;
-  background:#075698; /* default background for browsers without gradient support */
-  /* css3 */
-  background:-webkit-gradient(linear, 0 0, 0 100%, from(#2e88c4), to(#075698));
-  background:-moz-linear-gradient(#2e88c4, #075698);
-  background:-o-linear-gradient(#2e88c4, #075698);
-  background:linear-gradient(#2e88c4, #075698);
-  -webkit-border-radius:10px;
-  -moz-border-radius:10px;
-  border-radius:10px;
+#schedule {
+  border-style: solid;
+  border-color: black;
+  width: 300px;
+  height: 400px;
+  float: left;
+  padding-right: 10px;
+  padding-left: 10px;
+   border-radius: 25px;
 }
 
+#contact {
+  border-style: solid;
+  border-color: black;
+  float: right;
+  width: 250px;
+  height: 200px;
+  margin-right: 10px;
+  padding-right: 10px;
+  position: relative;
+   border-radius: 25px;
+
+} 
 </style>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 <script>
 $(document).ready(function(){
-  $(".location").click(function(){
-    $(".map").toggle();
+  $(".time").click(function(){
+    $("#schedule").toggle();
+  });
+  $(".contact").click(function(){
+    $("#contact").toggle();
   });
 });
 </script>
@@ -47,14 +56,35 @@ $(document).ready(function(){
   <span>12</span>
 </time>
 <div id="footer" align="center"> 
-<i class="location fa fa-map-marker fa-5x"></i> 
-<i class="time fa fa-clock-o fa-5x"></i> 
-<i class="invitation fa fa-download fa-5x"></i> 
- <i class="commute fa fa-plane fa-5x"></i> 
- <i class="contact fa fa-mobile fa-5x"></i> 
+<i class="time fa fa-clock-o fa-3x"></i> 
+ <i class="contact fa fa-mobile fa-3x"></i> 
 </div>
-<div class="triangle-right map" hidden>
-  Tirunelveli
+<div id="schedule" hidden>
+  <div class="wedding"> 
+    <h4><center>The Wedding</center></h4>
+    <img src="img/wedding.png" style="float:left;"/>
+    <div class="venue-content">
+    9:00 am - 10:15 am<br>
+    Annai Wedding hall,
+    NGO 'A' Colony,
+    Tirunelveli
+  </div>
+  </div>
+  <br><br><br>
+  <div class="reception">
+    <h4><center>The Reception</center></h4>
+    6:00 pm - 9:00 pm <br>
+    Karungal,
+    Kanyakumari
+  </div>
+</div>
+<div id="contact" hidden>
+   <h4>The Bride:</h4>
+   suganthikrishnavathi@gmail.com<br>
+   9902015004   <br>
+   <h4>The Groom:</h4>
+   ajainvivek07@gmail.com<br>
+   9902802982
 </div>
 </body>
 </html>
